@@ -1,0 +1,109 @@
+{
+    "experiment_name": "for_init",
+
+    "no_tb": false,
+    "no_cuda": false,
+    "sync_bn": true,
+
+    "distributed": true,
+    "proc_id" : 0,
+    "gpu" : 4,
+    "world_size" : 4,
+    "use_slurm": false,
+    "local_rank": 0,
+    "nodes": 1,
+
+    "is_train": true,
+    
+    "learning_rate": 0.0002,
+    "weight_decay": 0.001,
+    "resume" : "",
+    "start_epoch": 0,
+    "nepochs": 100,
+    "clip_grad_norm":0,
+    "print_freq": 100,
+    "eval_freq": 1,
+
+    "dataset_base_dir": "/root/WY/dataset/images",
+    "json_file_path": "/root/WY/dataset/lane3d_300/",
+    "save_json_path": "",
+    "dataset_name": "openlane",
+    "dataset": "300",
+    "model_name" : "LATR",
+    "pos_threshold": 0.5,
+    "evaluate_case": false,
+    "output_dir": "/root/WY/LATR_without_mms/results",
+    "mod": "openlane300",
+    "eval_ckpt": "",
+    "batch_size": 8,
+    "num_workers": 4,
+
+    
+
+    "mean": [0.485, 0.456, 0.406],
+    "std": [0.229, 0.224, 0.225],
+    "pred_cam": false,
+    "num_category": 21,
+    "max_lanes": 20,
+    
+    "org_h" : 1280,
+    "org_w" : 1920,
+    "crop_y" : 0,
+    "ipm_h":208,
+    "ipm_w": 128,
+    "resize_h" : 360,
+    "resize_w" : 480,
+    "top_view_region":[
+        [-10, 103], [10, 103], [-10, 3], [10, 3]],
+    
+    "fix_cam": false,
+    "cam_height": 1.55,
+    "pitch": 3,
+    "K": [[1000.0, 0.0, 960.0],
+    [0.0, 1000.0, 640.0],
+    [0.0, 0.0, 1.0]],
+
+    "use_default_anchor": false,
+    "anchor_y_steps": [3, 103, 20],
+    "anchor_y_steps_dense": [3, 103, 200],
+    "num_y_steps": 20,
+    "num_feature_levels":1,
+    
+    "weight_init": "normal",
+    "prob_th": 0.5,
+    "num_class":21,
+
+    "encoder": "ResNet101",
+    "_dim_":256,
+    "num_query":40,
+    "num_pt_per_line":20,
+    "num_cls_and_reg":4,
+    "num_decoder_layers": 6,
+    "num_group":1,
+    "num_pred": 4,
+    "sparse_num_group":4,
+    
+    "ce_weight":2.0,
+    "mask_weight": 5.0,
+    "dice_weight": 2.0,
+    "objectness_weight": 1.0,
+    "depth_weight": 0.0000001,
+
+    "xs_loss_weight":1.0,
+    "zs_loss_weight":5.0,
+    "vis_loss_weight":1.0,
+    "cls_loss_weight":0.001,
+    
+
+    "sparse_ins_num_convs":4,
+    "sparse_ins_num_groups":1,
+    "sparse_ins_sparse_num_groups":1,
+    "sparse_ins_encoder_out_dims":256,
+    "sparse_ins_decoder_output_iam":true,
+    "sparse_ins_decoder_scale_factor":1.0,
+    "sparse_ins_sparse_decoder_weight":1.0,
+
+    "ms2one_type": "DilateNaive",
+    "ms2one_num_scales": 4
+
+}

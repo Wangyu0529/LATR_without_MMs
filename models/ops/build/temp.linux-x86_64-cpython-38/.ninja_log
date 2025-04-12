@@ -1,0 +1,4 @@
+# ninja log v5
+0	6397	1744482448736115790	/root/WY/LATR_without_mms/models/ops/build/temp.linux-x86_64-cpython-38/root/WY/LATR_without_mms/models/ops/src/cpu/ms_deform_attn_cpu.o	a54b5e51ed283ef9
+2	21386	1744482463723758180	/root/WY/LATR_without_mms/models/ops/build/temp.linux-x86_64-cpython-38/root/WY/LATR_without_mms/models/ops/src/vision.o	8114c6f6512ffd2a
+1	26180	1744482468503645947	/root/WY/LATR_without_mms/models/ops/build/temp.linux-x86_64-cpython-38/root/WY/LATR_without_mms/models/ops/src/cuda/ms_deform_attn_cuda.o	dbec6fac3d53b164
